@@ -21,7 +21,7 @@ pipeline {
         }
 	stage('Chrome') {
             steps {
-		sh 'mvn clean test "-Dsurefire.suiteXmlFiles=src/test/resources/TestNG.xml" "-Dtestng.dtd.http=true"'
+		sh 'mvn clean test "-Dsurefire.suiteXmlFiles=src/test/resources/TestNG.xml" "-Dtestng.dtd.http=true" "-Dselenide.headless=true"'
             }
         }
     }
